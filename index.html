@@ -9,45 +9,62 @@
     margin: 0;
     padding: 0;
     height: 100%;
+    font-family: "Inter", sans-serif;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-    font-family: "Inter", sans-serif;
     background: linear-gradient(270deg, #6a0dad, #8a2be2, #4b0082, #9400d3);
     background-size: 400% 400%;
-    animation: gradientMove 15s ease infinite;
-    overflow: hidden;
+    animation: gradientMove 20s ease infinite;
   }
-
   @keyframes gradientMove {
     0% { background-position: 0% 50%; }
     50% { background-position: 100% 50%; }
     100% { background-position: 0% 50%; }
   }
-
   h1 {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    font-size: 3em;
+    font-size: 4em;
     color: #ffffff;
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
-    margin: 0;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.4);
+    margin-bottom: 20px;
   }
-
-  p {
+  .links {
+    display: flex;
+    gap: 30px;
+    margin-top: 20px;
+  }
+  .links a {
+    text-decoration: none;
+    color: #ffffff;
     font-size: 1.2em;
+    padding: 10px 20px;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  .links a:hover {
+    background-color: rgba(255, 255, 255, 0.25);
+    transform: scale(1.05);
+  }
+  p {
+    position: absolute;
+    bottom: 20px;
     color: #ffffff;
     text-align: center;
-    max-width: 600px;
-    line-height: 1.5;
+    font-size: 1em;
     text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
   }
 </style>
 </head>
 <body>
 <h1>s.prxy</h1>
-<p>Welcome to s.prxy! This was Developed by @sealgod.xyz, allowing you to go on any website you desire.</p>
+<div class="links">
+  <a href="#">New Tab</a>
+  <a href="#">Bookmarks</a>
+  <a href="#">History</a>
+  <a href="#">Settings</a>
+</div>
+<p>Developed by @sealgod.xyz</p>
 </body>
 </html>
